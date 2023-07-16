@@ -1,0 +1,305 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    background: #0c111b;
+    position: relative;
+    font-family:  Roboto, sans-serif;
+}
+.navbar{
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    background: #0c111b;
+    display: flex;
+    top: 0;
+    padding: 0 4%;
+    align-items: center;
+    z-index: 9;
+}
+.nav-links{
+    list-style: none;
+    display: flex;
+}
+.nav-items a{
+    text-decoration: none;
+    color: aliceblue;
+    text-transform: capitalize;
+    opacity: 0.9;
+    margin-left: 20px;
+}
+.brand-logo{
+    width: 80px;
+    cursor: pointer;
+}
+.right-container{
+    /* display: block; */
+     margin-left: auto;   /*it has significance if we set the width of container */
+}
+.search-box{
+    background: transparent;
+    border: none;
+    width: 200px;
+    outline: none;
+    color: rgb(185, 182, 182);
+    border-bottom: 1px solid white;
+    height: 30px;
+    transition: 0.5s;
+    text-transform: capitalize;
+    font-size: 15px;
+    font-weight: 500;
+}
+.search-box:focus{
+    width: 350px;
+    border-color: blue;
+}
+.right-container input::placeholder{
+    color: white;
+    opacity: 0.8;
+}
+.sub-btn{
+    height: 28px;
+    width: 100px;
+    background-color: rgb(76, 130, 248);
+    color: white;
+    text-transform: uppercase;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bolder;
+    cursor: pointer;
+    margin-left: 7px;
+}
+.sub-btn:hover{
+    background-color: rgb(45, 111, 253);
+}
+.login-link{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    padding-left: 7px;
+    opacity: 0.9;
+    font-size: 14px;
+    font-weight: 530;
+}
+.caraousel-container{
+    position: relative;
+    width: 100%;
+    margin: 20px 0;
+    height: 480px;
+    /* overflow-x: hidden; */
+    overflow: hidden;
+}
+.caraousel{
+    width: 92%;
+    height: 100%;
+    display: flex;
+    /* position: relative; */
+    margin: auto;
+    margin-top: 80px;
+}
+.slider{
+    flex: 0 0 auto;
+    margin-right: 30px;
+    /* position: relative; */
+    background: rgb(0,0,0,0.5);
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    left: 0%;
+    transition: 1s;
+    overflow: hidden;
+}
+.slider-img{
+    width: 70%;
+    /* min-height: 100%; */
+    /* object-fit: cover; */
+    display: block;
+    margin-left: auto;
+}
+.slide-content{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    z-index: 2;
+    background: linear-gradient(to right,#030b17 80%,#0c111b00);
+    color: white;
+}
+.movie-title{
+    padding-left: 50px;
+    text-transform: capitalize;
+    margin-top: 80px;
+}
+.movie-desc{
+    width: 80%;
+    line-height: 30px;
+    padding-left: 50px;
+    margin-top: 15px;
+    opacity: 0.8;
+}
+.video-card-container{
+    position: relative;
+    width: 92%;
+    margin:auto;
+    height: 10vw;
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+.video-card{
+    position: relative;
+    min-width: calc(100%/5 - 10px);
+    width: calc(100%/5 - 10px);
+    height: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    /* background: #030b17; */
+}
+.video-card-image, .card-video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card-video{
+    position: absolute;
+}
+.video-card:hover .video-card-image{
+    display: none;
+}
+.title{
+    color: #fff;
+    opacity: 0.9;
+    padding-left: 4%;
+    text-transform: capitalize;
+    font-size: 22px;
+    font-weight: 500;
+}
+.movies-list{
+    width: 100%;
+    height: 220px;
+    position: relative;
+    margin: 10px 0 20px;
+}
+.card-container{
+    position: relative;
+    width: 92%;
+    padding-left: 10px;
+    height: 220px;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: visible;
+    scroll-behavior: smooth;
+}
+.card-container::-webkit-scrollbar{
+    display: none;
+}
+.card{
+    position: relative;
+    min-width: 150px;
+    width: 150px;
+    height: 200px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-right: 10px;
+    transition: 0.5s;
+}
+.card-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card:hover{
+    transform: scale(1.1);
+}
+.card:hover .card-body{
+    opacity: 1;
+}
+.card-body{
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: linear-gradient(to bottom,rgba(4,8,15,0),#192133 90%);
+    padding: 10px;
+    transition: 0.5s;
+}
+.name{
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin-top: 60%;
+}
+.des{
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    opacity: 0.8;
+    margin: 5px 0;
+}
+.watchlist-btn{
+    position: relative;
+    width: 100%;
+    text-transform: capitalize;
+    background: none;
+    border: none;
+    font-weight: 500;
+    text-align: right;
+    color: rgba(255,255,255,0.5);
+    margin: 5px 0;
+    cursor: pointer;
+    padding: 10px 5px;
+    border-radius: 5px;
+}
+.watchlist-btn::before{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: -7px;
+    height: 35px;
+    width: 35px;
+    background-image: url(images/add.png);
+    background-size: cover;
+    transform: scale(0.4);
+    cursor: pointer;
+}
+.watchlist-btn:hover{
+    color: #fff;
+    background: rgba(255,255,255,0,1);
+}
+.pre-btn,.next-btn{
+    position: absolute;
+    top: 0;
+    width: 5%;
+    height: 100%;
+    z-index: 2;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+.pre-btn{
+    left: 0;
+    background: linear-gradient(to right,#0c111b 0%,#0c111b00);
+}
+.next-btn{
+    right: 0;
+    background: linear-gradient(to left, #0c111b 0%,#0c111b00);
+}
+.pre-btn img,.next-btn img{
+    width: 15px;
+    height: 20px;
+    opacity: 0;
+}
+.pre-btn:hover img,.next-btn:hover img{
+    opacity: 1;
+}
+
+
+
